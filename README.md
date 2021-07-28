@@ -47,3 +47,9 @@
  * Determine the appropriateness of the attraction based on their criteria. (e.g. Free, Suitable for Children, etc.)
  * See reviews posted by other site users.
  * Provide helpful reviews to other users.
+
+#### User Stories:
+ * As a user, I would like to find a list of attractions for my chosen area.
+ * As a user, I would like to view honest, personal feedback of other users about each site to help make a better informed decision.
+ * As a user, I would like to examine which attractions meet my criteria. (e.g. Free, Pre-Booking Required, etc.)
+ * As a user, I would like to help other users by providing my own reviews of attractions.
