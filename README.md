@@ -42,4 +42,8 @@
  * The aim of this project is to design and build a website allowing users to research tourist attractions in their chosen area.
  * Users will be able to create their own unique accounts and post reviews on featured tourist attractions. This will assist other users in researching potential places to visit on their next vacation.
 
-
+#### User Goals:
+ * Research attractions for their chosen area.
+ * Determine the appropriateness of the attraction based on their criteria. (e.g. Free, Suitable for Children, etc.)
+ * See reviews posted by other site users.
+ * Provide helpful reviews to other users.
