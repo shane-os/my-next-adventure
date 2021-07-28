@@ -58,3 +58,10 @@
  * As a site owner, I wish to provide information on various attractions in the user's chosen area.
  * As a site owner, I want to allow users to easily filter attractions based on specific criteria to find applicable attractions.
  * As a site owner, I would like to build a site allowing users to give reviews on attractions.
+
+#### User Requirements:
+ * Attraction search and filter function delivers correct results promptly.
+ * Users are able to create accounts and log into their accounts as required.
+ * Accounts created and user details provided are to be secure.
+ * Users are able to post reviews on attractions
+ * Internal site links direct users as expected.
