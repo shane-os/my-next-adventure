@@ -65,3 +65,8 @@
  * Accounts created and user details provided are to be secure.
  * Users are able to post reviews on attractions
  * Internal site links direct users as expected.
+
+#### User Expectations:
+ * Attraction information and images are appropriate and shown in an ordered fashion.
+ * Attraction reviews are easy to publish and view.
+ * Users can contact the site owner if an issue occurs.
