@@ -53,3 +53,8 @@
  * As a user, I would like to view honest, personal feedback of other users about each site to help make a better informed decision.
  * As a user, I would like to examine which attractions meet my criteria. (e.g. Free, Pre-Booking Required, etc.)
  * As a user, I would like to help other users by providing my own reviews of attractions.
+
+#### Site Owner Goals:
+ * As a site owner, I wish to provide information on various attractions in the user's chosen area.
+ * As a site owner, I want to allow users to easily filter attractions based on specific criteria to find applicable attractions.
+ * As a site owner, I would like to build a site allowing users to give reviews on attractions.
