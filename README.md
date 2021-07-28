@@ -36,3 +36,10 @@
 ### Accreditation & Gratitude
 
 ### References
+
+## UX (User Experience):
+#### Project Goals:
+ * The aim of this project is to design and build a website allowing users to research tourist attractions in their chosen area.
+ * Users will be able to create their own unique accounts and post reviews on featured tourist attractions. This will assist other users in researching potential places to visit on their next vacation.
+
+
