@@ -14,10 +14,10 @@
     <section>
         <nav class="navbar fixed-top navbar-dark">
             <div class="container-fluid">
-                <a href="#home">My Next Adventure</a>
-                <a href="#attractions">Attractions</a>
-                <a href="#contactus">Contact Us</a>
-                <a href="#account">Login / Sign Up</a>
+                <a href="{{ url_for('home')  }}">My Next Adventure</a>
+                <a href="{{ url_for('attractions') }}">Attractions</a>
+                <a href="{{ url_for('contactus') }}">Contact Us</a>
+                <a href="{{ url_for('account') }}">Login / Sign Up</a>
             </div>
         </nav>
     </section>
