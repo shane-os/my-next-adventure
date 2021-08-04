@@ -79,3 +79,14 @@ Initially I set out my ideas for the site using pen and paper. Following a few c
  * Desktop
  * Tablet
  
+#### Colour Scheme:
+For this project, I have chosen to use striking and varied colours to represent the numerous attractions available. Different colours will be used to indicate the style of the attraction on offer. E.g. Red as a colour of excitement will be used for theme parks and similar venues. The main colours chosen to be used in this project are:
+
+ * #000000 - Black - Text
+ * #538D22 - Maximum Green - Attractions involving nature, outdoors events
+ * #4F74E3 - Royal Blue Light - Knowledge and sea-life based attractions such as museums, boat tours amd aquariums
+ * #F41101 - Red - Energic and exciting attractions including sporting events and theme parks
+ * #997748 Metallic Sunburst (Brown) - Historical buildings and landmarks including castles and palaces  
+
+
+
