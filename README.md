@@ -70,3 +70,12 @@
  * Attraction information and images are appropriate and shown in an ordered fashion.
  * Attraction reviews are easy to publish and view.
  * Users can contact the site owner if an issue occurs.
+
+## Site Layout & Design:
+#### Wireframes:
+Initially I set out my ideas for the site using pen and paper. Following a few changes, I proceeded to create wireframes using the Balsamiq Wireframe application. The three wireframes have been stored in a PDF format at the following locations:
+
+ * Mobile
+ * Desktop
+ * Tablet
+ 
