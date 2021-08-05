@@ -2,6 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Home Page */
+
+#home-image {
+    background-image: url('../images/home-image.jpg');
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+}
+
 li {
     display: inline;
   }
