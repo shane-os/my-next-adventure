@@ -2,3 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+li {
+    display: inline;
+  }
+
+li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #538D22 ; 
+    color: white;
+  }
