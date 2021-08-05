@@ -17,3 +17,9 @@ li a {
     background-color: #538D22 ; 
     color: white;
   }
+
+  footer {
+    color: white;
+    text-align: center;
+    background-color: #4F74E3;
+  }
