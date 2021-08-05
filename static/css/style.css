@@ -16,10 +16,18 @@ li a {
 .navbar a:hover {
     background-color: #538D22 ; 
     color: white;
-  }
+}
 
-  footer {
+footer {
     color: white;
     text-align: center;
     background-color: #4F74E3;
-  }
+}
+
+.contactform {
+    max-width: 80%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-block-start: 20px;
+    padding-block-end: 30px;
+}
