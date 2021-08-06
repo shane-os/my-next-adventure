@@ -9,6 +9,7 @@
     background-position: center;
     background-size: cover;
     max-width: 100%;
+    height: 90vh;
 }
 
 li {
@@ -31,6 +32,7 @@ footer {
     color: white;
     text-align: center;
     background-color: #4F74E3;
+    padding-top: 5px;
 }
 
 .contactform {
