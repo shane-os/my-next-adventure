@@ -2,7 +2,7 @@
 {% block content %}
     <h2>Contact Us</h2>
     <div class="container-fluid">
-        <form class="contactform">
+        <form class="contactform" onsubmit="return contactFormSend(this);">
             <div class="row">
                 <div class="col">
                     <label for="fname">First Name:</label>
@@ -19,9 +19,9 @@
             </div>
             <div class="row">
                 <label for="messagebox">Message:</label>
-                <textarea id="messagebox" rows="4"></textarea>
+                <textarea id="messagebox" rows="4" name="message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
     </div>
 {% endblock %}
