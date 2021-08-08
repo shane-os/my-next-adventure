@@ -1,12 +1,14 @@
 import os
-from flask import Flask, render_template, flash, redirect, request, session, url_for
+from flask import (
+    Flask, render_template,
+    flash, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -19,14 +21,15 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("pages/home.html", title="My Next Adventure")
 
 
 @app.route("/attractions")
 def attractions():
     getattractions = mongo.db.attractions.find()
-    return render_template("pages/attractions.html",
-                        title="Attractions", attractions=getattractions)
+    return render_template(
+        "pages/attractions.html",
+        title="Attractions", attractions=getattractions)
 
 
 @app.route("/account")
@@ -36,8 +39,10 @@ def account():
 
 @app.route("/login")
 def login():
-    return render_template("pages/auth.html", title="Authorization",
-                login=True)
+    return render_template(
+        "pages/auth.html",
+        title="Authorization",
+        login=True)
 
 
 @app.route("/register")
