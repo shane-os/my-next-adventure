@@ -4,12 +4,26 @@
 
 /* Home Page */
 
+body {
+    font-size: 20px;
+}
+
 #home-image {
     background-image: url('../images/home-image.jpg');
     background-position: center;
     background-size: cover;
     max-width: 100%;
     height: 90vh;
+}
+
+.search {
+    align-content: center;
+    width:75%;
+}
+
+.form-check {
+    color: white;
+    align-items: center;
 }
 
 li {
