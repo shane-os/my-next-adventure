@@ -1,9 +1,10 @@
 {% extends "layout/base.html" %}
 {% block content %}
-    <h2>{{Title}}</h2>
+    <h1>Attractions Page</h1>
     {% for attraction in attractions %}
-        {{ attraction.attraction_name }}
-        {{ attraction.location }}
-        {{ attraction.description }}
+        {{ attraction.attraction_name }}<br>
+        {{ attraction.location }}<br>
+        {{ attraction.description }}<br>
+        <img src="{{ attraction.image }}"><br>
     {% endfor %}
 {% endblock %}
