@@ -1,29 +1,33 @@
 {% extends "layout/base.html" %}
 {% block content %}
 <div id="home-image">
-    <div class="container-fluid"></div>
+    <div class="container-fluid" id="attractionsearch"></div>
         <div class="row">
             <h1>My Next Adventure</h1>
         </div>
-        <form id="attractionsearch"> 
+        <form> 
             <div class="row">
-                <form>
-                    <input type="search" class="searchattraction" autocomplete="off" placeholder="Desired Location..." >
-                    <button id="search" class="search" type="submit"><i class="fa fa-search"></i></button>
-                </form>
+                <input type="search" id="searchbar" class="search" autocomplete="off" placeholder="Desired Location..." >
+                <button id="searchbutton" class="search" type="submit"><i class="fa fa-search"></i></button>
             </div>
             <div class="row">
-                <div class="form-check">
-                    <input class="form-check-input" type ="checkbox" id="free" value="1">
-                    <label class="form-check-label" for="free">Free</label>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type ="checkbox" id="free" value="1">
+                        <label class="form-check-label" for="free">Free</label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type ="checkbox" id="prebooking" value="2">
-                    <label class="form-check-label" for="prebooking">Pre-Booking Required</label>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type ="checkbox" id="prebooking" value="2">
+                        <label class="form-check-label" for="prebooking">Pre-Booking Required</label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type ="checkbox" id="children" value="3">
-                    <label class="form-check-label" for="children">Suitable for Children</label>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type ="checkbox" id="children" value="3">
+                        <label class="form-check-label" for="children">Suitable for Children</label>
+                    </div>
                 </div>
             </div>
         </form>
