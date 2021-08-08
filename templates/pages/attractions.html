@@ -1,4 +1,9 @@
 {% extends "layout/base.html" %}
 {% block content %}
-    <h2>Attractions</h2>
+    <h2>{{Title}}</h2>
+    {% for attraction in attractions %}
+        {{ attraction.attraction_name }}
+        {{ attraction.location }}
+        {{ attraction.description }}
+    {% endfor %}
 {% endblock %}
