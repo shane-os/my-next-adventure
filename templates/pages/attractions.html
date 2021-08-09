@@ -2,9 +2,15 @@
 {% block content %}
     <h1>Attractions Page</h1>
     {% for attraction in attractions %}
-        {{ attraction.attraction_name }}<br>
-        {{ attraction.location }}<br>
-        {{ attraction.description }}<br>
-        <img src="{{ attraction.image }}"><br>
+        <div class="card-columns">
+            <div class="card">
+                <img class="card-img-top" src="{{ attraction.image }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ attraction.attraction_name }}</h5>
+                    <p class="card-text">{{ attraction.location }}</p>
+                    <p class="card-text">{{ attraction.description }}</p>
+                </div>
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}
