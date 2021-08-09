@@ -49,8 +49,8 @@ def login():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        user_exists = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+        user = mongo.db.users
+        user_exists = user.find_one({"username": request.form.get("username").lower()})
 
         if user_exists:
             flash("Username already in use")
@@ -62,7 +62,7 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password")),
+            "password": generate_password_hash(request.form.get("userpassword")),
             "admin": False
         }
 
@@ -70,7 +70,6 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("You have Successfully Registered! Thank You!")
-
     return render_template("pages/auth.html", title="Authorization")
 
 
