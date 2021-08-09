@@ -1,0 +1,10 @@
+<header></header>
+<section>
+    {% with messages = get_flashed_message() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h5>{{ message }}</h5>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
