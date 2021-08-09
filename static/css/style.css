@@ -56,3 +56,11 @@ footer {
     padding-block-start: 20px;
     padding-block-end: 30px;
 }
+
+#registerform {
+    max-width: 50%;
+    align-content: center;
+    margin-left: 10%;
+    margin-top: 30px;
+    padding: auto;
+}

@@ -1,7 +1,26 @@
 {% extends "layout/base.html" %}
 {% block content %}
     <h2>Authorizarion</h2>
-
+    <div class="card" id="registerform">
+        <div class="card-body">
+          <h5 class="card-title">Register</h5>
+          <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="userpassword">Password</label>
+                <input type="password" id="userpassword" name="userpassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="samepassword"> Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Password">
+            </div>
+            <a href="#" class="btn btn-primary">Register</a>
+          </form>
+        </div>
+    </div>
     {% if login == True %}
     <p>Login goes here</p>
     components/form/login.html
