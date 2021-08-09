@@ -4,7 +4,7 @@
     <div class="card" id="registerform">
         <div class="card-body">
           <h5 class="card-title">Register</h5>
-          <form>
+          <form method="POST" action="{{ url_for('register') }}">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Username">
@@ -14,7 +14,7 @@
                 <input type="password" id="userpassword" name="userpassword" placeholder="Password">
             </div>
             <div class="form-group">
-                <label for="samepassword"> Confirm Password</label>
+                <label for="confirmpassword"> Confirm Password</label>
                 <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Password">
             </div>
             <a href="#" class="btn btn-primary">Register</a>

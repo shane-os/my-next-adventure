@@ -48,6 +48,29 @@ def login():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        user_exists = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if user_exists:
+            flash("Username already in use")
+            return redirect(url_for("register"))
+
+        if request.form.get("password") != request.form.get("confirmpassword"):
+            flash("Passwords do not match!")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+            "admin": False
+        }
+
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        flash("You have Successfully Registered! Thank You!")
+
     return render_template("pages/auth.html", title="Authorization")
 
 
