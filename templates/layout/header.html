@@ -1,6 +1,6 @@
 <header></header>
 <section>
-    {% with messages = get_flashed_message() %}
+    {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
                 <h5>{{ message }}</h5>
