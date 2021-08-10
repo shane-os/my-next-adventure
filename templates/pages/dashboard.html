@@ -10,4 +10,61 @@
           <p class="card-text">Below you will be able to add an attraction, delete an attraction or make an edit. You will also be able to leave reviews!</p>
         </div>
     </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Add an Attraction</h4>
+            <p class="card-text">Please fill in the fields below to submit your favourite attraction!</p>
+            <form>
+              <div class="row">
+                <label for="attraction_name">Attraction Name</label>
+                <input type="text" id="attraction_name" name="attraction_name">
+              </div>
+              <div class="row">
+                <label for="location">Attraction Location</label>
+                <input type="text" id="location" name="location">
+              </div>
+              <div class="row">
+                <label for="description">Description:</label>
+                <textarea id="messagebox" rows="4" name="description"></textarea>
+              </div>
+              <div class="row">
+                <label for="image">Image Url</label>
+                <input type="text" id="image" name="image">
+                <small class="text-muted">Please post the image address</small>
+              </div>
+              <p>Is the attraction free to enter?</p>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="freeyes" name="freeattraction" class="custom-control-input" value="Yes">
+                <label class="custom-control-label" for="freeattraction">Yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="freeno" name="freeattraction" class="custom-control-input" value="No">
+                <label class="custom-control-label" for="freeattraction">No</label>
+              </div>
+              <p>Are tickets required to be booked in advance?</p>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="bookyes" name="bookticket" class="custom-control-input" value="Yes">
+                <label class="custom-control-label" for="bookticket">Yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="bookno" name="bookticket" class="custom-control-input" value="No">
+                <label class="custom-control-label" for="bookticket">No</label>
+              </div>
+              <p>Is this attraction suitable for children?</p>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="childyes" name="children" class="custom-control-input" value="Yes">
+                <label class="custom-control-label" for="children">Yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="childno" name="children" class="custom-control-input" value="No">
+                <label class="custom-control-label" for="children">No</label>
+              </div>
+              <a href="#" class="btn btn-primary">Submit</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 {% endblock %}
