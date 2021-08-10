@@ -45,19 +45,20 @@ def login():
         user_exists = user.find_one({"username": request.form.get("username").lower()})
 
         if user_exists:
-            correctpassword = user.find_one({"password": request.form.get("password")})
 
-            if correctpassword:
+            if check_password_hash(user_exists["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("You have Successfully Registered! Thank You!")
+                flash("You have Successfully Logged In! Thank You!")
                 return render_template("pages/home.html", title="Login")
             else:
-                flash("Incorrect Password. Please try again")
+                flash("Incorrect Username/Password. Please try again")
                 return render_template("pages/account.html", title="Login")
+
         else:
             flash("Username Not Registered. Please create an account!")
             return render_template("pages/account.html", title="Login")
-            
+
+    return render_template("pages/account.html", title="Login")        
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
