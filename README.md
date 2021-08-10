@@ -91,5 +91,12 @@ For this project, I have chosen to use striking and varied colours to represent 
  * #F41101 - Red - Energic and exciting attractions including sporting events and theme parks
  * #997748 Metallic Sunburst (Brown) - Historical buildings and landmarks including castles and palaces  
 
+## Technologies:
+#### Programming Languages:
+ * [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+ * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+ * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+ * [Python](https://www.python.org/about/)
 
-
+#### Database:
+ * [MongoDB](https://www.mongodb.com/)
