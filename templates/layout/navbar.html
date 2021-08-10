@@ -12,6 +12,7 @@
     </nav>
 </section>
 <section>
+<div class="container-fluid" id="flashmessage">
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
@@ -19,4 +20,5 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
+</div>
 </section>

@@ -42,6 +42,13 @@ li a {
     color: white;
 }
 
+#flashmessage {
+    color: black;
+    background-color: #4F74E3;
+    padding-top: 5px;
+    text-align: center;
+}
+
 footer {
     color: white;
     text-align: center;
