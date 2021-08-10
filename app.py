@@ -38,13 +38,26 @@ def account():
     return render_template("pages/account.html", title="My Account")
 
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template(
-        "pages/account.html",
-        title="Login"
-        )
+    if request.method == "POST":
+        user = mongo.db.users
+        user_exists = user.find_one({"username": request.form.get("username").lower()})
 
+        if user_exists:
+            correctpassword = user.find_one({"password": request.form.get("password")})
+
+            if correctpassword:
+                session["user"] = request.form.get("username").lower()
+                flash("You have Successfully Registered! Thank You!")
+                return render_template("pages/home.html", title="Login")
+            else:
+                flash("Incorrect Password. Please try again")
+                return render_template("pages/account.html", title="Login")
+        else:
+            flash("Username Not Registered. Please create an account!")
+            return render_template("pages/account.html", title="Login")
+            
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
