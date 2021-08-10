@@ -41,9 +41,9 @@ def account():
 @app.route("/login")
 def login():
     return render_template(
-        "pages/auth.html",
-        title="Authorization",
-        login=True)
+        "pages/account.html",
+        title="Login"
+        )
 
 
 @app.route("/register", methods=["GET", "POST"])
