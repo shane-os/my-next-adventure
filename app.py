@@ -49,7 +49,7 @@ def login():
             if check_password_hash(user_exists["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("You have Successfully Logged In! Thank You!")
-                return render_template("pages/home.html", title="Login")
+                return render_template("pages/dashboard.html", title="Login")
             else:
                 flash("Incorrect Username/Password. Please try again")
                 return render_template("pages/account.html", title="Login")
@@ -85,6 +85,10 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("You have Successfully Registered! Thank You!")
     return render_template("pages/auth.html", title="Authorization")
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("pages/dashboard.html", title="User Profile")
 
 
 @app.route("/contactus")
