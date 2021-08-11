@@ -88,7 +88,7 @@ def register():
     return render_template("pages/auth.html", title="Authorization")
 
 
-@app.route("/dashboard", methods=["GET","POST"])
+@app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
     if request.method == "POST":
         newattraction = {
@@ -101,8 +101,9 @@ def dashboard():
             "suitable_for_children": request.form.get("children").value()
         }
         mongo.db.task.insert_one(newattraction)
-        flash("New Attraxction Added!")
+        flash("New Attraction Added!")
         return redirect(url_for("attractions"))
+
     return render_template("pages/dashboard.html", title="User Profile")
 
 
