@@ -60,6 +60,7 @@ def login():
 
     return render_template("pages/account.html", title="Login")        
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -86,8 +87,22 @@ def register():
         flash("You have Successfully Registered! Thank You!")
     return render_template("pages/auth.html", title="Authorization")
 
-@app.route("/dashboard")
+
+@app.route("/dashboard", methods=["GET","POST"])
 def dashboard():
+    if request.method == "POST":
+        newattraction = {
+            "attraction": request.form.get("attraction_name"),
+            "location": request.form.get("location"),
+            "description": request.form.get("description"),
+            "image": request.form.get("image"),
+            "free": request.form.get("freeattraction").value(),
+            "pre_booking_required": request.form.get("bookticket").value(),
+            "suitable_for_children": request.form.get("children").value()
+        }
+        mongo.db.task.insert_one(newattraction)
+        flash("New Attraxction Added!")
+        return redirect(url_for("attractions"))
     return render_template("pages/dashboard.html", title="User Profile")
 
 
