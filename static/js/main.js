@@ -1,14 +1,14 @@
-import swal from 'sweetalert';
 const formRef = document.querySelector("#contactus")
+const firstNameRef = document.querySelector("#fname")
 formRef.addEventListener("submit", contactFormSend)
 
 
-function contactFormSend(event, contact) {
+function contactFormSend(event) {
     event.preventDefault()
     emailjs.send("service_sd2xyge","Contact-Form", {
-        "from_name": contact.fname.value,
-        "from_email": contact.contactemail.value,
-        "message": contact.message.value
+        "from_name": formRef.fname.value,
+        "from_email": formRef.contactemail.value,
+        "message": formRef.message.value
     })
     .then(
         function(response) {
@@ -16,7 +16,7 @@ function contactFormSend(event, contact) {
                     title: "Form Sent Successfully!",
                     text: "Thank you for submitting the Form",
                     icon: "success",
-                    confirmButtonText: 'Close',
+                    button: 'Close',
                 });
             console.log("It worked!", response);
         },
