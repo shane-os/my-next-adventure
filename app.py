@@ -84,6 +84,7 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
+        return redirect(url_for("dashboard"))
         flash("You have Successfully Registered! Thank You!")
     return render_template("pages/auth.html", title="Authorization")
 
