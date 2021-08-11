@@ -96,9 +96,9 @@ def dashboard():
             "location": request.form.get("location"),
             "description": request.form.get("description"),
             "image": request.form.get("image"),
-            "free": request.form.get("freeattraction").value(),
-            "pre_booking_required": request.form.get("bookticket").value(),
-            "suitable_for_children": request.form.get("children").value()
+            "free": request.form.get("freeattraction"),
+            "pre_booking_required": request.form.get("bookticket"),
+            "suitable_for_children": request.form.get("children")
         }
         mongo.db.task.insert_one(newattraction)
         flash("New Attraction Added!")
