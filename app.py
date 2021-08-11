@@ -92,7 +92,7 @@ def register():
 def dashboard():
     if request.method == "POST":
         newattraction = {
-            "attraction": request.form.get("attraction_name"),
+            "attraction_name": request.form.get("attraction_name"),
             "location": request.form.get("location"),
             "description": request.form.get("description"),
             "image": request.form.get("image"),
