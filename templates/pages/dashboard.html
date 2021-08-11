@@ -16,7 +16,7 @@
           <div class="card-body">
             <h4 class="card-title">Add an Attraction</h4>
             <p class="card-text">Please fill in the fields below to submit your favourite attraction!</p>
-            <form>
+            <form method="POST" >
               <div class="row">
                 <label for="attraction_name">Attraction Name</label>
                 <input type="text" id="attraction_name" name="attraction_name">
@@ -27,7 +27,7 @@
               </div>
               <div class="row">
                 <label for="description">Description:</label>
-                <textarea id="messagebox" rows="4" name="description"></textarea>
+                <textarea id="description" rows="4" name="description" minlength="5" maxlength="500"></textarea>
               </div>
               <div class="row">
                 <label for="image">Image Url</label>
