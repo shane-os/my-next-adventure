@@ -91,16 +91,28 @@ def register():
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
     if request.method == "POST":
+        if request.form.get("freeattraction") == "Yes":
+            attractionprice = True
+        else:
+            attractionprice = False
+        if request.form.get("bookticket") == "Yes":
+            prebook = True
+        else:
+            prebook = False
+        if request.form.get("children") == "Yes":
+            child = True
+        else:
+            child = False
         newattraction = {
             "attraction_name": request.form.get("attraction_name"),
             "location": request.form.get("location"),
             "description": request.form.get("description"),
             "image": request.form.get("image"),
-            "free": request.form.get("freeattraction"),
-            "pre_booking_required": request.form.get("bookticket"),
-            "suitable_for_children": request.form.get("children")
+            "free": attractionprice,
+            "pre_booking_required": prebook,
+            "suitable_for_children": child
         }
-        mongo.db.task.insert_one(newattraction)
+        mongo.db.attractions.insert_one(newattraction)
         flash("New Attraction Added!")
         return redirect(url_for("attractions"))
 
