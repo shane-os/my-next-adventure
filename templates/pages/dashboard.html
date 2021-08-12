@@ -19,15 +19,15 @@
             <form method="POST" action="{{ url_for('dashboard') }}">
               <div class="row">
                 <label for="attraction_name">Attraction Name</label>
-                <input type="text" id="attraction_name" name="attraction_name">
+                <input type="text" id="attraction_name" name="attraction_name" minlength="5" maxlength="75" required >
               </div>
               <div class="row">
                 <label for="location">Attraction Location</label>
-                <input type="text" id="location" name="location">
+                <input type="text" id="location" name="location" minlength="5" maxlength="75" required >
               </div>
               <div class="row">
                 <label for="description">Description:</label>
-                <textarea id="description" rows="4" name="description" minlength="5" maxlength="500"></textarea>
+                <textarea id="description" rows="4" name="description" minlength="5" maxlength="500" required></textarea>
               </div>
               <div class="row">
                 <label for="image">Image Url</label>
