@@ -98,5 +98,16 @@ For this project, I have chosen to use striking and varied colours to represent 
  * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
  * [Python](https://www.python.org/about/)
 
-#### Database:
+#### Libraries & Tools:
+ * [Git](https://git-scm.com/)
+ * [Github](https://github.com/)
+ * [Gitpod](https://www.gitpod.io/)
+ * [Heroku](https://www.heroku.com/)
+ * [Bootstrap](https://getbootstrap.com/)
+ * [Google Fonts](https://fonts.google.com/)
+ * [SweetAlert2](https://sweetalert2.github.io/#usage)
+ * [Font Awesome](https://fontawesome.com/)
+ * [EmailJS](https://www.emailjs.com/)
+
+#### User Data Collection, Storage & Retrieval:
  * [MongoDB](https://www.mongodb.com/)
