@@ -9,6 +9,17 @@
                     <h5 class="card-title">{{ attraction.attraction_name }}</h5>
                     <p class="card-text">{{ attraction.location }}</p>
                     <p class="card-text">{{ attraction.description }}</p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="card-text" >Free: {{ attraction.free }}</p>
+                        </div>
+                        <div class="col">
+                            <p class="card-text">Pre-Booking Required: {{ attraction.pre_booking_required }}</p>
+                        </div>
+                        <div class="col">
+                            <p class="card-text">Suitable for Children: {{ attraction.suitable_for_children }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
