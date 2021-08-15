@@ -49,7 +49,7 @@ def login():
             if check_password_hash(user_exists["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("You have Successfully Logged In! Thank You!")
-                return render_template("pages/dashboard.html", title="Login")
+                return redirect(url_for("dashboard", username=session["user"]))
             else:
                 flash("Incorrect Username/Password. Please try again")
                 return render_template("pages/account.html", title="Login")
@@ -84,13 +84,16 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        return redirect(url_for("dashboard"))
         flash("You have Successfully Registered! Thank You!")
+        return redirect(url_for("dashboard", username=session["user"]))
+
     return render_template("pages/auth.html", title="Authorization")
 
 
-@app.route("/dashboard", methods=["GET", "POST"])
-def dashboard():
+@app.route("/dashboard/<username>", methods=["GET", "POST"])
+def dashboard(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
     if request.method == "POST":
         if request.form.get("freeattraction") == "Yes":
             attractionprice = True
@@ -117,7 +120,7 @@ def dashboard():
         flash("New Attraction Added!")
         return redirect(url_for("attractions"))
 
-    return render_template("pages/dashboard.html", title="User Profile")
+    return render_template("pages/dashboard.html", username=username)
 
 
 @app.route("/contactus")
