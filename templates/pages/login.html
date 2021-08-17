@@ -1,10 +1,10 @@
 {% extends "layout/base.html" %}
 {% block content %}
-    <h2>Account</h2>
+    <h2>{{ title }}</h2>
     <div class="card" id="loginform">
         <div class="card-body">
           <h5 class="card-title">Login</h5>
-          <form method="POST" action="{{ url_for('account') }}">
+          <form method="POST" action="{{ url_for('login') }}">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Username" minlength="3" maxlength="10" pattern="^[a-zA-Z0-9]{3,10}$" required class="validate">
