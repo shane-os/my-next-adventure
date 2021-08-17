@@ -33,16 +33,10 @@ def attractions():
         title="Attractions", attractions=getattractions)
 
 
-@app.route("/account")
-def account():
-    return render_template("pages/account.html", title="My Account")
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        user = mongo.db.users
-        user_exists = user.find_one({"username": request.form.get("username").lower()})
+        user_exists = mongo.db.users.find_one({"username": request.form.get("username").lower()})
 
         if user_exists:
 
@@ -57,7 +51,7 @@ def login():
             flash("Username Not Registered. Please create an account!")
             return redirect(url_for("login"))
 
-    return render_template("pages/account.html", title="Login")
+    return render_template("pages/login.html", title="Login")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -86,7 +80,7 @@ def register():
         flash("You have Successfully Registered! Thank You!")
         return redirect(url_for("dashboard", username=session["user"]))
 
-    return render_template("pages/auth.html", title="Authorization")
+    return render_template("pages/register.html", title="Register")
 
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
@@ -95,32 +89,6 @@ def dashboard(username):
         {"username": session["user"]})["username"]
     if session["user"]:
         return render_template("pages/dashboard.html", username=username)
-
-    if request.method == "POST":
-        if request.form.get("freeattraction") == "Yes":
-            attractionprice = True
-        else:
-            attractionprice = False
-        if request.form.get("bookticket") == "Yes":
-            prebook = True
-        else:
-            prebook = False
-        if request.form.get("children") == "Yes":
-            child = True
-        else:
-            child = False
-        newattraction = {
-            "attraction_name": request.form.get("attraction_name"),
-            "location": request.form.get("location"),
-            "description": request.form.get("description"),
-            "image": request.form.get("image"),
-            "free": attractionprice,
-            "pre_booking_required": prebook,
-            "suitable_for_children": child
-        }
-        mongo.db.attractions.insert_one(newattraction)
-        flash("New Attraction Added!")
-        return redirect(url_for("attractions"))
 
     return redirect(url_for("home"))
 

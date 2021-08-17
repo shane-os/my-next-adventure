@@ -1,0 +1,23 @@
+{% extends "layout/base.html" %}
+{% block content %}
+    <h2>Account</h2>
+    <div class="card" id="loginform">
+        <div class="card-body">
+          <h5 class="card-title">Login</h5>
+          <form method="POST" action="{{ url_for('account') }}">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username" minlength="3" maxlength="10" pattern="^[a-zA-Z0-9]{3,10}$" required class="validate">
+            </div>
+            <div class="form-group">
+                <label for="userpassword">Password</label>
+                <input type="password" id="userpassword" name="userpassword" placeholder="Password" minlength="3" maxlength="10" pattern="^[a-zA-Z0-9]{3,10}$" required class="validate">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Login</button>
+          </form>
+          <div>
+            <p class="small">Haven't registered yet? Please register <a href="{{ url_for('register') }}">here.</a></p>
+          </div>
+        </div>
+    </div>
+{% endblock %}
