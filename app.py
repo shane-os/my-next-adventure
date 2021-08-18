@@ -41,9 +41,9 @@ def login():
         if user_exists:
 
             if check_password_hash(user_exists["password"], request.form.get("userpassword")):
-                session["user"] = request.form.get("username").lower()
+                session['user'] = request.form.get("username").lower()
                 flash("You have Successfully Logged In! Thank You!")
-                return redirect(url_for("dashboard", username=session["user"]))
+                return redirect(url_for("dashboard", username=session['user']))
             else:
                 flash("Incorrect Username/Password. Please try again")
                 return redirect(url_for("login"))
@@ -57,8 +57,7 @@ def login():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        user = mongo.db.users
-        user_exists = user.find_one({"username": request.form.get("username").lower()})
+        user_exists = mongo.db.users.find_one({"username": request.form.get("username").lower()})
 
         if user_exists:
             flash("Username already in use")
@@ -86,12 +85,12 @@ def register():
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
     username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    if session["user"]:
+        {'username': session['user']})['username']
+    if session['user']:
         return render_template("pages/dashboard.html", username=username)
-
-    return redirect(url_for("home"))
-
+    else:
+        return redirect(url_for("home"))
+ 
 
 @app.route("/contactus")
 def contactus():
