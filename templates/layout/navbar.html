@@ -5,9 +5,13 @@
                 <li><a href="{{ url_for('home')  }}">My Next Adventure</a></li>
                 <li><a href="{{ url_for('attractions') }}">Attractions</a></li>
                 <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% if session.user %}
+                    <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('logout', username=session['user']) }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
