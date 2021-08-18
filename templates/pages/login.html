@@ -4,6 +4,17 @@
     <div class="card" id="loginform">
         <div class="card-body">
           <h5 class="card-title">Login</h5>
+          <section>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="row">
+                            <h5 class="center-align">{{ message }}</h5>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+          </section>
           <form method="POST" action="{{ url_for('login') }}">
             <div class="form-group">
                 <label for="username">Username:</label>
