@@ -90,7 +90,14 @@ def dashboard(username):
         return render_template("pages/dashboard.html", username=username)
     else:
         return redirect(url_for("home"))
- 
+
+
+@app.route("/logout")
+def logout():
+    flash("You have successfully logged out!")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 
 @app.route("/contactus")
 def contactus():
