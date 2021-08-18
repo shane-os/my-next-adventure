@@ -1,6 +1,17 @@
 {% extends "layout/base.html" %}
 {% block content %}
     <h2>{{ title }}</h2>
+    <section>
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for message in messages %}
+                  <div class="row">
+                      <h5 class="center-align">{{ message }}</h5>
+                  </div>
+              {% endfor %}
+          {% endif %}
+      {% endwith %}
+    </section>
     <div class="card" id="registerform">
         <div class="card-body">
           <h5 class="card-title">Register</h5>
