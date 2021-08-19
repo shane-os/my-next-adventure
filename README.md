@@ -36,7 +36,8 @@
 
 ### Deployment
  * Gitpod
- * Local Deployment
+ * Clone Project
+ * Module Requirements
  * MongoDB
  * Heroku
 
@@ -144,3 +145,13 @@ To access their account users only need to enter their username and password. Ch
 ## Deployment:
 #### Gitpod:
 The entire site was coded using the Gitpod Integrated Development Environment. Using the "git commit" and "git push" methods the files making up the site were updated and saved on a Github depository. In parallel to this, an account was set up on MongoDb to allow for a database to store user and attraction data and a Heroku account was established.
+
+#### Clone Project
+The My Next Attraction site can be run locally by following these steps:
+
+1. In your browser, go to My Next Attraction [repository](https://github.com/shane-os/my-next-adventure) on Github.
+2. Click on the Code button with the dropdown arrow.
+3. Select the HTTPS option and copy the link shown.
+4. Open the Gitpod Integrated Development Environment
+5. In the Git terminal, decide where the cloned directory will be located by entering the change working directory command ($ cd filepath) followed by the desired storage location.
+6. In the Git terminal, use the git clone command ($ git clone) and enter the repository link copied earlier.
