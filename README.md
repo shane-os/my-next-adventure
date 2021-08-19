@@ -155,3 +155,13 @@ The My Next Attraction site can be run locally by following these steps:
 4. Open the Gitpod Integrated Development Environment
 5. In the Git terminal, decide where the cloned directory will be located by entering the change working directory command ($ cd filepath) followed by the desired storage location.
 6. In the Git terminal, use the git clone command ($ git clone) and enter the repository link copied earlier.
+
+#### Module Requirements
+For the site to run, it requires a set of python modules. An individual module can be installed in the Gitpod terminal using the command:
+
+pip3 install module_name
+
+To install all required modules, please enter the following command:
+
+pip3 install -r requiremnts.txt
+
