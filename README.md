@@ -126,3 +126,6 @@ For this project, I have chosen to use striking and varied colours to represent 
 ## Testing
 #### Navigation Bar:
 Each link in the navigation bar was tested to ensure that the correct page was returned. Prior to the user logging into/ registering for account, the navigation bar present will not show the user either the dashboard or the logout options.
+
+#### Contact Form:
+A simple contact form was built to allow users to ask for more information, report an error on the site, report a mistake in one of the atttractions listed, etc. The site uses EmailJS to facilitate the sending of the form to an email account. Each of the four fields (first name, last name, email address & message) is required to be filled in for the form to be submitted. Firstly the form was tested by leaving each field blank. If a user attempts to submit a blank form, the form is not sent and they are informed that they have to fill in the missing field. For the email address field, the user is required to fill in a value that contains a string of text followed by an "@" symbol followed by another piece of text. A variety of values were inputed without meeting one or more of the previously mentioned criteria. Finally to confirm the message has been sent, an alert using the "Sweet Alert 2" package would appear on screen.
