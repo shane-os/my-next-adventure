@@ -26,6 +26,8 @@
  * Future Implementation
 
 ### Testing
+ * Navigation Bar
+ * Contact Form
  * User Account Access
  * Code Validators
 
@@ -120,3 +122,7 @@ For this project, I have chosen to use striking and varied colours to represent 
  * Profile
  * Contact Form
  * Attractions Listing
+
+## Testing
+#### Navigation Bar:
+Each link in the navigation bar was tested to ensure that the correct page was returned. Prior to the user logging into/ registering for account, the navigation bar present will not show the user either the dashboard or the logout options.
