@@ -35,6 +35,10 @@
 ### Resolution of Bugs
 
 ### Deployment
+ * Gitpod
+ * Local Deployment
+ * MongoDB
+ * Heroku
 
 ### Accreditation & Gratitude
 
@@ -136,3 +140,7 @@ When a user registers for the site they are required to enter a unique user name
 
 #### User Account Login:
 To access their account users only need to enter their username and password. Checks were conducted to ensure that only usernames and their associated passwords could be used to access the site. If a username entered into the login section was not a registered account, the following message would appear "Username Not Registered. Please create an account!". The python script would check the Mongodb collection to see if the correct values were inputed. To test the password check ability, registered usernames were used alongside incorrect passwords. Each time the correct message appeared: "Incorrect Username/Password. Please try again".
+
+## Deployment:
+#### Gitpod:
+The entire site was coded using the Gitpod Integrated Development Environment. Using the "git commit" and "git push" methods the files making up the site were updated and saved on a Github depository. In parallel to this, an account was set up on MongoDb to allow for a database to store user and attraction data and a Heroku account was established.
