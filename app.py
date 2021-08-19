@@ -91,6 +91,13 @@ def dashboard(username):
     else:
         return redirect(url_for("home"))
 
+'''
+@app.route("/attraction/edit/<attraction_id>")
+def attraction_edit(attraction_id):
+    attraction_to_edit = mongo.db.attraactions.find_one({
+        "attraction_name": 
+    })
+'''
 
 @app.route("/logout")
 def logout():

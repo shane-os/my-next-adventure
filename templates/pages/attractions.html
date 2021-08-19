@@ -20,11 +20,13 @@
                             <p class="card-text">Suitable for Children: {{ attraction.suitable_for_children }}</p>
                         </div>
                     </div>
+                    {% if session.user %}
                     <div class="row">
                         <div class="col">
                             <button type="submit" class="btn btn-primary mb-2">Edit Attraction</button>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
