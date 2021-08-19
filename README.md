@@ -184,9 +184,7 @@ import os
 os.environ.setdefault("IP", "0.0.0.0")
 os.environ.setdefault("PORT", "5000")
 os.environ.setdefault("SECRET_KEY", "Your Chosen Secret Key")
-os.environ.setdefault(
-    "MONGO_URI",
-    "Your MongoDB URI")
+os.environ.setdefault("MONGO_URI", "Your MongoDB URI")
 os.environ.setdefault("MONGO_DBNAME", "my-next-adventure")
 os.environ.setdefault("DEBUG", "1")
 ```
@@ -199,3 +197,37 @@ The My Next Adventure application can now be run locally by entering the followi
 ```
 $ python3 app.py
 ```
+
+#### Heroku:
+After logging into your Heroku account, deploy the project to Heroku by following these steps:
+1. In the Git Terminal create the Procfile and requirements.txt file:
+Requirements:
+```
+pip3 freeze --local > requirements.txt
+```
+Procfile:
+```
+echo web: python app.py > Procfile
+```
+If successfully executed the Procfile will have the following line of code:
+```
+web: python app.py
+```
+
+2. On heroku, select "Create a New App", input an app name and choose a region and click "Create App".
+3. Select Github as the deployment method.
+4. Make sure that your username is displayed and enter the repository name. Once the correct repository is shown, click "Connect".
+5. As the environment variables are hidden in the env.py file, the environment variables will need to be entered into Heroku. Select settings and click on "Reveal Config Vars".
+6. Input the following environment variables:
+
+```
+"IP", "0.0.0.0"
+"PORT", "5000"
+"SECRET_KEY", "Your Chosen Secret Key"
+"MONGO_URI", "Your MongoDB URI"
+"MONGO_DBNAME", "my-next-adventure"
+```
+
+7. Select "Deploy".
+8. Select "Automatic Deployment" as our app will update when new commits are pushed to Github. 
+9. Click the "Deploy Branch" button and click "View App" to see the site.
