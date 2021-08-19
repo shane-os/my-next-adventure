@@ -28,7 +28,8 @@
 ### Testing
  * Navigation Bar
  * Contact Form
- * User Account Access
+ * User Account Registration
+ * User Account Login
  * Code Validators
 
 ### Resolution of Bugs
@@ -129,3 +130,7 @@ Each link in the navigation bar was tested to ensure that the correct page was r
 
 #### Contact Form:
 A simple contact form was built to allow users to ask for more information, report an error on the site, report a mistake in one of the atttractions listed, etc. The site uses EmailJS to facilitate the sending of the form to an email account. Each of the four fields (first name, last name, email address & message) is required to be filled in for the form to be submitted. Firstly the form was tested by leaving each field blank. If a user attempts to submit a blank form, the form is not sent and they are informed that they have to fill in the missing field. For the email address field, the user is required to fill in a value that contains a string of text followed by an "@" symbol followed by another piece of text. A variety of values were inputed without meeting one or more of the previously mentioned criteria. Finally to confirm the message has been sent, an alert using the "Sweet Alert 2" package would appear on screen.
+
+#### User Account Registration:
+When a user registers for the site they are required to enter a unique user name, a password and to confirm that password. To prevent duplicate usernames, a check is completed to ensure that the desired username is unique. The password chosen must also meet certain requirements: not contain blank spaces, minimum length of 3 and a maximum length of 10. Capital letters and numbers are allowed. Duplicate usersnames were used to ensure that only unique usernames are used. The password and confirm password fields were checked using different passwords of varying lengths, letters and numbers to ensure that the checks coded into the site worked as expected.
+
