@@ -111,3 +111,12 @@ For this project, I have chosen to use striking and varied colours to represent 
 
 #### User Data Collection, Storage & Retrieval:
  * [MongoDB](https://www.mongodb.com/)
+
+## Features:
+#### Developed:
+ * Navigation Bar
+ * Login
+ * Register
+ * Profile
+ * Contact Form
+ * Attractions Listing
