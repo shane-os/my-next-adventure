@@ -146,7 +146,7 @@ To access their account users only need to enter their username and password. Ch
 #### Gitpod:
 The entire site was coded using the Gitpod Integrated Development Environment. Using the "git commit" and "git push" methods the files making up the site were updated and saved on a Github depository. In parallel to this, an account was set up on MongoDb to allow for a database to store user and attraction data and a Heroku account was established.
 
-#### Clone Project
+#### Clone Project:
 The My Next Attraction site can be run locally by following these steps:
 
 1. In your browser, go to My Next Attraction [repository](https://github.com/shane-os/my-next-adventure) on Github.
@@ -156,7 +156,7 @@ The My Next Attraction site can be run locally by following these steps:
 5. In the Git terminal, decide where the cloned directory will be located by entering the change working directory command ($ cd filepath) followed by the desired storage location.
 6. In the Git terminal, use the git clone command ($ git clone) and enter the repository link copied earlier.
 
-#### Module Requirements
+#### Module Requirements:
 For the site to run, it requires a set of python modules. An individual module can be installed in the Gitpod terminal using the command:
 
 pip3 install module_name
@@ -165,3 +165,37 @@ To install all required modules, please enter the following command:
 
 pip3 install -r requiremnts.txt
 
+#### MongoDB:
+A MongoDB account is necessary to safely store user and attraction data essiential to the site. Please sign-up or sign-in to an account [here.](https://www.mongodb.com/)
+
+1. Create a new cluster.
+2. Go to the Database Access section and add a new database user. Enter your chosen username and password. Keep these details secure as your database and therefore the site will be compromised if these became public. Make sure that the user has "Read and Write" priviledges. Click add user. 
+3. In the Network Analysis section, choose "allow access from anywhere". Enter "0.0.0.0" as the IP Address.
+4. Click on the collections button and then the "Add My Own Data" button before creating a new database called "my-next-adventure"
+5. Create the ffollowing two collections:
+ a. Users
+ b. Attractions
+
+6. In the Gitpod IDE, create a file named "env.py" and end enter the following lines and variables:
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "Your Chosen Secret Key")
+os.environ.setdefault(
+    "MONGO_URI",
+    "Your MongoDB URI")
+os.environ.setdefault("MONGO_DBNAME", "my-next-adventure")
+os.environ.setdefault("DEBUG", "1")
+```
+
+Note 1: For the secret key variable use a site such as [randomkeygen](https://randomkeygen.com/) to create a secure key. In your gitignore file make sure to add env.py to avoid the secret key becoming public.
+Note 2: The Mongo URI can be found by clicking the connect button on your MongoDB clusters. Copy the link provided and paste into the Mongo_URI variable space. 
+
+The My Next Adventure application can now be run locally by entering the following command into the Git Terminal:
+
+```
+$ python3 app.py
+```
