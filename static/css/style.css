@@ -68,6 +68,15 @@ li a {
     background-color: #ffffff;
 }
 
+.card {
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 #flashmessage {
     color: black;
     background-color: #4F74E3;

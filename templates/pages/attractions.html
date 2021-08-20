@@ -2,33 +2,39 @@
 {% block content %}
     <h1>Attractions Page</h1>
     {% for attraction in attractions %}
-        <div class="card-columns">
-            <div class="card">
-                <img class="card-img-top" src="{{ attraction.image }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ attraction.attraction_name }}</h5>
-                    <p class="card-text">{{ attraction.location }}</p>
-                    <p class="card-text">{{ attraction.description }}</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="card-text" >Free: {{ attraction.free }}</p>
+        <div class="row">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-md-10">
+                <div class="card">
+                    <img class="card-img-top" src="{{ attraction.image }}" alt="{{ attraction.attraction_name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ attraction.attraction_name }}</h5>
+                        <p class="card-text">{{ attraction.location }}</p>
+                        <p class="card-text">{{ attraction.description }}</p>
+                        <div class="row">
+                            <div class="col">
+                                <p class="card-text" >Free: {{ attraction.free }}</p>
+                            </div>
+                            <div class="col">
+                                <p class="card-text">Pre-Booking Required: {{ attraction.pre_booking_required }}</p>
+                            </div>
+                            <div class="col">
+                                <p class="card-text">Suitable for Children: {{ attraction.suitable_for_children }}</p>
+                            </div>
                         </div>
-                        <div class="col">
-                            <p class="card-text">Pre-Booking Required: {{ attraction.pre_booking_required }}</p>
+                        {% if session.user %}
+                        <div class="row">
+                            <div class="col">
+                                <a href="{{ url_for('edit_attraction', attraction_id=attraction._id) }}" class="btn btn-primary">Edit Attraction</a>
+                                <a href="{{ url_for('delete_attraction', attraction_id=attraction._id) }}" class="btn btn-danger">Delete Attraction</a>
+                            </div>
                         </div>
-                        <div class="col">
-                            <p class="card-text">Suitable for Children: {{ attraction.suitable_for_children }}</p>
-                        </div>
+                        {% endif %}
                     </div>
-                    {% if session.user %}
-                    <div class="row">
-                        <div class="col">
-                            <a href="{{ url_for('edit_attraction', attraction_id=attraction._id) }}" class="btn btn-primary">Edit Attraction</a>
-                            <a href="{{ url_for('delete_attraction', attraction_id=attraction._id) }}" class="btn btn-danger">Delete Attraction</a>
-                        </div>
-                    </div>
-                    {% endif %}
                 </div>
+            </div>
+            <div class="col-sm-1">
             </div>
         </div>
     {% endfor %}
