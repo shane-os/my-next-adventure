@@ -32,6 +32,7 @@ def attractions():
         "pages/attractions.html",
         title="Attractions", attractions=getattractions)
 
+
 # Attraction Search & Retrieval
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -98,15 +99,14 @@ def dashboard(username):
     else:
         return redirect(url_for("home"))
 
-'''
-@app.route("/attraction/edit/<attraction_id>")
-def attraction_edit(attraction_id):
-    attraction_to_edit = mongo.db.attraactions.find_one({
-        "attraction_name": 
-    })
-'''
+
+@app.route("/edit_attraction/<attraction_id>", methods=["GET", "POST"])
+def edit_attraction(attraction_id):
+    attraction_to_edit = mongo.db.attractions.find_one({"_id": ObjectId(attraction_id)})
+    return render_template("pages/edit_attraction.html", attractions=attraction_to_edit)
 
 
+# Add Attraction
 @app.route("/add_attraction", methods=["GET", "POST"])
 def add_attraction():
     if request.method == "POST":
@@ -136,6 +136,7 @@ def add_attraction():
         return redirect(url_for("attractions"))
 
     return render_template("pages/add_attraction.html", title="Add Attraction")
+
 
 @app.route("/logout")
 def logout():
