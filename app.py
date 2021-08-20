@@ -102,6 +102,32 @@ def dashboard(username):
 
 @app.route("/edit_attraction/<attraction_id>", methods=["GET", "POST"])
 def edit_attraction(attraction_id):
+    if request.method == "POST":
+        if request.form.get("freeattraction") == "Yes":
+            attractionprice = True
+        else:
+            attractionprice = False
+        if request.form.get("bookticket") == "Yes":
+            prebook = True
+        else:
+            prebook = False
+        if request.form.get("children") == "Yes":
+            child = True
+        else:
+            child = False
+        attraction_edit = {
+            "attraction_name": request.form.get("attraction_name"),
+            "location": request.form.get("location"),
+            "description": request.form.get("description"),
+            "image": request.form.get("image"),
+            "free": attractionprice,
+            "pre_booking_required": prebook,
+            "suitable_for_children": child
+        }
+        mongo.db.attractions.update({"_id": ObjectId(attraction_id)}, attraction_edit)
+        flash("Attraction Successfully Updated!")
+        return redirect(url_for("attractions"))
+
     attraction_to_edit = mongo.db.attractions.find_one({"_id": ObjectId(attraction_id)})
     return render_template("pages/edit_attraction.html", attractions=attraction_to_edit)
 
