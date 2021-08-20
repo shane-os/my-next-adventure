@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Home Page */
+
 
 h1 {
     color: #000000;
@@ -12,6 +12,8 @@ h1 {
 body {
     font-size: 20px;
 }
+
+/* Home Page */
 
 #home-image {
     background-image: url('../images/home-image.jpg');
@@ -30,6 +32,8 @@ body {
     color: white;
     align-items: center;
 }
+
+/* Navbar */
 
 li {
     display: inline;
@@ -78,7 +82,7 @@ li a {
 }
 
 #flashmessage {
-    color: black;
+    color: white;
     background-color: #4F74E3;
     padding-top: 5px;
     text-align: center;

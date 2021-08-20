@@ -6,7 +6,7 @@
           {% if messages %}
               {% for message in messages %}
                   <div class="row">
-                      <h5 class="center-align">{{ message }}</h5>
+                      <h5 class="center-align" id="flashmessage">{{ message }}</h5>
                   </div>
               {% endfor %}
           {% endif %}
