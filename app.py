@@ -32,6 +32,13 @@ def attractions():
         "pages/attractions.html",
         title="Attractions", attractions=getattractions)
 
+# Attraction Search & Retrieval
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    target = request.form.get("target")
+    attractions = list(mongo.db.attractions.find({"$text": {"$search": target}}))
+    return render_template("pages/attractions.html", title="Attractions", attractions=attractions)
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():

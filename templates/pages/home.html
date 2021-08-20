@@ -6,9 +6,9 @@
             <div class="container">
                 <h1>My Next Adventure</h1>
                 <div class="search">
-                    <form>
+                    <form action="{{ url_for('search') }}" method="POST">
                         <div>
-                            <input type="search" id="searchbar" class="search" autocomplete="off" placeholder="Desired Location..." >
+                            <input type="search" name="target" id="searchbar" class="search" autocomplete="off" placeholder="Desired Location..." minlength="3">
                             <button id="searchbutton" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                         <div class="row">
