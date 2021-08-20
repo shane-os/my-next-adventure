@@ -92,11 +92,12 @@ footer {
 }
 
 .contactform {
+    outline: #000000;
     max-width: 80%;
     padding-right: 10%;
     padding-left: 10%;
-    padding-block-start: 20px;
-    padding-block-end: 30px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #registerform {
