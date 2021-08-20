@@ -1,8 +1,9 @@
+// Contact Form
 const formRef = document.querySelector("#contactus")
 const firstNameRef = document.querySelector("#fname")
 formRef.addEventListener("submit", contactFormSend)
 
-
+// Successful Submission Pop-Up Message
 function contactFormSend(event) {
     event.preventDefault()
     emailjs.send("service_sd2xyge","Contact-Form", {
@@ -19,8 +20,5 @@ function contactFormSend(event) {
                     button: 'Close',
                 });
             console.log("It worked!", response);
-        },
-        function(error) {
-            console.log("Unfortunately, it has not worked", error);
         });
 }
