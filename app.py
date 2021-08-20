@@ -107,7 +107,7 @@ def attraction_edit(attraction_id):
 '''
 
 
-@app.route("/add_attraction")
+@app.route("/add_attraction", methods=["GET", "POST"])
 def add_attraction():
     if request.method == "POST":
         if request.form.get("freeattraction") == "Yes":
