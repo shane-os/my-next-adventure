@@ -16,19 +16,19 @@
     <form method="POST" action="{{ url_for('edit_attraction', attraction_id=attractions._id) }}">
         <div class="row">
         <label for="attraction_name">Attraction Name</label>
-        <input type="text" id="attraction_name" name="attraction_name" minlength="5" maxlength="75" required >
+        <input type="text" id="attraction_name" name="attraction_name" value= "{{ attractions.attraction_name }}" minlength="5" maxlength="75" required >
         </div>
         <div class="row">
         <label for="location">Attraction Location</label>
-        <input type="text" id="location" name="location" minlength="5" maxlength="75" required >
+        <input type="text" id="location" name="location" minlength="5" value="{{ attractions.location }}" maxlength="75" required >
         </div>
         <div class="row">
         <label for="description">Description:</label>
-        <textarea id="description" rows="4" name="description" minlength="5" maxlength="500" required></textarea>
+        <textarea id="description" rows="4" name="description" minlength="5" maxlength="500" required> {{ attractions.description }} </textarea>
         </div>
         <div class="row">
         <label for="image">Image Url</label>
-        <input type="text" id="image" name="image">
+        <input type="text" id="image" name="image" value="{{ attractions.image }}">
         <small class="text-muted">Please post the image address</small>
         </div>
         <p>Is the attraction free to enter?</p>
