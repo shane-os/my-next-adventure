@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
-
 h1 {
     color: #000000;
     text-align: center;
@@ -11,6 +10,7 @@ h1 {
 
 body {
     font-size: 20px;
+    font-family: 'Roboto';
 }
 
 /* Home Page */
