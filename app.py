@@ -164,6 +164,14 @@ def add_attraction():
     return render_template("pages/add_attraction.html", title="Add Attraction")
 
 
+# Delete Attraction
+@app.route("/delete_attraction/<attraction_id>")
+def delete_attraction(attraction_id):
+    mongo.db.attractions.remove({"_id": ObjectId(attraction_id)})
+    flash("Attraction Deleted Successfully!")
+    return redirect(url_for("attractions"))
+
+
 @app.route("/logout")
 def logout():
     flash("You have successfully logged out!")
