@@ -7,7 +7,7 @@
                 <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
-                    <li><a href="{{ url_for('attraction', username=session['user']) }}">Add Attraction</a></li>
+                    <li><a href="{{ url_for('add_attraction', username=session['user']) }}">Add Attraction</a></li>
                     <li><a href="{{ url_for('logout', username=session['user']) }}">Logout</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}">Login</a></li>

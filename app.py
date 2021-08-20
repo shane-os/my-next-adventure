@@ -106,6 +106,37 @@ def attraction_edit(attraction_id):
     })
 '''
 
+
+@app.route("/add_attraction")
+def add_attraction():
+    if request.method == "POST":
+        if request.form.get("freeattraction") == "Yes":
+            attractionprice = True
+        else:
+            attractionprice = False
+        if request.form.get("bookticket") == "Yes":
+            prebook = True
+        else:
+            prebook = False
+        if request.form.get("children") == "Yes":
+            child = True
+        else:
+            child = False
+        newattraction = {
+            "attraction_name": request.form.get("attraction_name"),
+            "location": request.form.get("location"),
+            "description": request.form.get("description"),
+            "image": request.form.get("image"),
+            "free": attractionprice,
+            "pre_booking_required": prebook,
+            "suitable_for_children": child
+        }
+        mongo.db.attractions.insert_one(newattraction)
+        flash("New Attraction Added!")
+        return redirect(url_for("attractions"))
+
+    return render_template("pages/add_attraction.html", title="Add Attraction")
+
 @app.route("/logout")
 def logout():
     flash("You have successfully logged out!")
