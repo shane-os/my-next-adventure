@@ -157,6 +157,17 @@ Attractions:
  * Profile
  * Contact Form
  * Attractions Listing
+ * Add Attraction
+ * Edit Attraction
+ * Delete Attraction
+
+#### Future Implementation:
+ * Links to sites to purchase tickets
+ * Attraction Reviews
+ * Attraction Rating System
+ * Attraction location maps
+ * Greater search capabilities
+ * Videos and multiple images of each attraction
 
 ## Testing
 #### Navigation Bar:
