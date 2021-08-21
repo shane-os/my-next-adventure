@@ -1,7 +1,7 @@
 // Contact Form
-const formRef = document.querySelector("#contactus")
-const firstNameRef = document.querySelector("#fname")
-formRef.addEventListener("submit", contactFormSend)
+const formRef = document.querySelector("#contactus");
+const firstNameRef = document.querySelector("#fname");
+formRef.addEventListener("submit", contactFormSend);
 
 // Successful Submission Pop-Up Message
 function contactFormSend(event) {

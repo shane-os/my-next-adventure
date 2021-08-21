@@ -14,8 +14,8 @@
         {% endwith %}
     </section>
     <!-- Attraction Records are looped onto the page -->
-    {% if attractions|length > 0 %}
-        {% for attraction in attractions %}
+    {% for attraction in attractions %}
+        {% if attraction|length > 0 %}
             <div class="row">
                 <div class="col-sm-1">
                 </div>
@@ -51,10 +51,10 @@
                 <div class="col-sm-1">
                 </div>
             </div>
-        {% endfor %}
-    {% else %}
+        {% else %}
         <div class="card">
-            <h2><b>No Results were found. Please try Again!</b></h2>
+            <h1><b>No Results were found. Please try Again!</b></h1>
         </div>
-    {% endif %}
+        {% endif %}
+    {% endfor %}
 {% endblock %}
