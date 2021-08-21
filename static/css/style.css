@@ -44,6 +44,8 @@ li a {
     color: white;
 }
 
+/* Jumbotron */
+
 .jumbotron {
     width: 70%;
     align-content: center;
@@ -53,6 +55,8 @@ li a {
     margin-right: auto;
     margin-top: auto;
 }
+
+/* Search Function */
 
 #searchbar {
     border-radius: 15px;
@@ -70,10 +74,7 @@ li a {
     align-content: center;
 }
 
-.form-check {
-    color: white;
-    align-items: center;
-}
+/* Card Containers */
 
 .card {
     align-content: center;
@@ -84,6 +85,8 @@ li a {
     padding-right: 5%;
 }
 
+/* Flash Messages */
+
 #flashmessage {
     color: white;
     background-color: #4F74E3;
@@ -91,12 +94,15 @@ li a {
     text-align: center;
 }
 
+/* Footer */
+
 footer {
     color: white;
     text-align: center;
     background-color: #000000;
     padding-top: 5px;
 }
+
 
 .contactform {
     outline: #000000;
@@ -107,6 +113,8 @@ footer {
     padding-bottom: 5%;
 }
 
+/* Registration Form */
+
 #registerform {
     max-width: 50%;
     align-content: center;
@@ -115,8 +123,15 @@ footer {
     padding: auto;
 }
 
-#registerform {
-    max-width: 40%;
-    align-content:center ;
-    margin: 15%
-}
+/* Media Queries */
+@media only screen and (min-width: 601px) {
+    body {
+      font-size: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 601px) {
+    body {
+      font-size: 20px;
+    }
+  }
