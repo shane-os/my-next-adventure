@@ -187,6 +187,14 @@ To access their account users only need to enter their username and password. Ch
  * The CSS code was passed through the Jigsaw Validator
  * The JavaScript code was passed through the JSHint Validator
 
+## Resolution of Bugs:
+Dashboard Access:
+Whilst building and testing the login and register entry points, the site would fail sporadically at bringing the user to dashboard after they has logged in or registered. To isolate where the cause of the problem was, I examined the MongoDB records to make sure that the user details were correctly recorded in the database. As it was clear that the usernames and passwords were being successfully recorded, I checked the dashboard, login and register html files along with the app.py file. Soon it became appearent that a required variable for the form was not being passed through correctly. To improve this layout, I examined [W3Schools](https://www.w3schools.com/PYTHON/) for Python related issues and I accessed [Tutorials Point](https://www.tutorialspoint.com/flask/index.htm) for Flask specific help.
+
+Logout Function:
+The log out and login functions are key to ensuring that only registered users can add, edit and delete attractions. For a while it was unclear whether the user session has finished. To fix this issue, I introduced flash messaging to inform the user that they are no logged in.
+
+
 
 ## Deployment:
 #### Gitpod:
