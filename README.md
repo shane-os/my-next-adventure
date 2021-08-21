@@ -48,35 +48,36 @@
 ## UX (User Experience):
 #### Project Goals:
  * The aim of this project is to design and build a website allowing users to research tourist attractions in their chosen area.
- * Users will be able to create their own unique accounts and post reviews on featured tourist attractions. This will assist other users in researching potential places to visit on their next vacation.
+ * Users will be able to create their own unique accounts and view, create, update and delete attractions. This will assist other users in researching potential places to visit on their next vacation.
+ * By engaging users to form an active community, this hopefully will lead to more people visiting less well known attractions and potentially achieving a greater experience.
 
 #### User Goals:
  * Research attractions for their chosen area.
  * Determine the appropriateness of the attraction based on their criteria. (e.g. Free, Suitable for Children, etc.)
- * See reviews posted by other site users.
- * Provide helpful reviews to other users.
+ * Add new attractions to the site for the benefit of other users.
 
 #### User Stories:
  * As a user, I would like to find a list of attractions for my chosen area.
- * As a user, I would like to view honest, personal feedback of other users about each site to help make a better informed decision.
  * As a user, I would like to examine which attractions meet my criteria. (e.g. Free, Pre-Booking Required, etc.)
- * As a user, I would like to help other users by providing my own reviews of attractions.
+ * As a user, I wish to add information about attractions to make others aware of these places.
+ * As a user, I would like to help other users by correcting any errors I notice in descriptions of attractions.
 
 #### Site Owner Goals:
  * As a site owner, I wish to provide information on various attractions in the user's chosen area.
- * As a site owner, I want to allow users to easily filter attractions based on specific criteria to find applicable attractions.
- * As a site owner, I would like to build a site allowing users to give reviews on attractions.
+ * As a site owner, I want to allow users to easily search for attractions based on name or location.
+ * As a site owner, I would like to build a site allowing users add their own attractions.
 
 #### User Requirements:
  * Attraction search and filter function delivers correct results promptly.
  * Users are able to create accounts and log into their accounts as required.
  * Accounts created and user details provided are to be secure.
- * Users are able to post reviews on attractions
+ * New attractions are easy and straight forward to add to the site.
  * Internal site links direct users as expected.
 
 #### User Expectations:
  * Attraction information and images are appropriate and shown in an ordered fashion.
- * Attraction reviews are easy to publish and view.
+ * Attraction information can be updated if incorrect/ incomplete.
+ * Site layout is simple and easy to navigate.
  * Users can contact the site owner if an issue occurs.
 
 ## Site Layout & Design:
