@@ -133,4 +133,12 @@ footer {
     body {
       font-size: 20px;
     }
+    .card {
+        padding-top: 25px;
+        margin-top: 50px;
+    }
+    .jumbotron {
+        padding-top: 25px;
+        margin-top: 50px;
+    }
   }
