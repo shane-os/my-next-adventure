@@ -293,3 +293,9 @@ web: python app.py
  * Finally, I would like to thank the tutors, fellow students, mentors and everyone at Code Institute for creating a helpful and supporting environemnt in Slack and through the different webinars.
 
 ## References:
+Images & Descriptions:
+ * [Cliffs of Moher Image](https://unsplash.com/photos/AEallbg9q_A)
+ * [Cliffs of Moher Description](https://www.cliffsofmoher.ie/)
+ * [Giant's Causeway](https://www.nationaltrust.org.uk/giants-causeway)
+ * [Spike Island](https://www.spikeislandcork.ie/)
+ * [Blarney Castle](https://www.blarneycastle.ie/)
