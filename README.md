@@ -286,3 +286,10 @@ web: python app.py
 7. Select "Deploy".
 8. Select "Automatic Deployment" as our app will update when new commits are pushed to Github. 
 9. Click the "Deploy Branch" button and click "View App" to see the site.
+
+## Accreditation & Gratitude:
+ * Firstly, I would like to thank my family for their help in testing the site and providing helpful feedback on the asthetics of the site. Over 50 separate accounts were created to test the login, registration and attraction features.
+ * Secondly, I would like to thank my mentor Simen Daehlin for his support and guidance in creating the basic concept and layout of the site.
+ * Finally, I would like to thank the tutors, fellow students, mentors and everyone at Code Institute for creating a helpful and supporting environemnt in Slack and through the different webinars.
+
+## References:
