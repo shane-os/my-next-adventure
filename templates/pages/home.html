@@ -4,32 +4,13 @@
     <section>
         <div class="jumbotron">
             <div class="container">
-                <h1>My Next Adventure</h1>
+
                 <div class="search">
                     <form action="{{ url_for('search') }}" method="POST">
+                        <h1>My Next Adventure</h1>
                         <div>
                             <input type="search" name="target" id="searchbar" class="search" autocomplete="off" placeholder="Desired Location..." minlength="3">
                             <button id="searchbutton" type="submit"><i class="fas fa-search"></i></button>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type ="checkbox" id="free" value="1">
-                                    <label class="form-check-label" for="free">Free</label>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type ="checkbox" id="prebooking" value="2">
-                                    <label class="form-check-label" for="prebooking">Pre-Booking Required</label>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type ="checkbox" id="children" value="3">
-                                    <label class="form-check-label" for="children">Suitable for Children</label>
-                                </div>
-                            </div>
                         </div>
                     </form>
                 </div>

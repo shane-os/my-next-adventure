@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
+/* Text */
+
 h1 {
     color: #000000;
     text-align: center;
@@ -23,15 +25,6 @@ body {
     height: 90vh;
 }
 
-.search {
-    align-content: center;
-    width:75%;
-}
-
-.form-check {
-    color: white;
-    align-items: center;
-}
 
 /* Navbar */
 
@@ -58,6 +51,7 @@ li a {
     padding-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
 }
 
 #searchbar {
@@ -70,6 +64,15 @@ li a {
 #searchbutton {
     border: none;
     background-color: #ffffff;
+}
+
+.search {
+    align-content: center;
+}
+
+.form-check {
+    color: white;
+    align-items: center;
 }
 
 .card {
