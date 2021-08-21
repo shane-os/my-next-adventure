@@ -17,6 +17,7 @@
  * Icons
  * Images
  * Colour Scheme
+ * Database Structure
 
 ### Technologies
  * Programming Languages
@@ -94,13 +95,36 @@ Initially I set out my ideas for the site using pen and paper. Following a few c
 Icons from the Font Awesome collection were utilised to help users navigate the site. This allows the user to fully explore the site and obtain the best user experience possible. The icons were mainly used for social media icons and the search bar.
 
 #### Colour Scheme:
+![Coolor Palette](https://github.com/shane-os/my-next-adventure/blob/main/wireframes/my-next-adventure-colours-summary.png)
+
 For this project, I have chosen to use striking and varied colours to represent the numerous attractions available. Different colours will be used to indicate the style of the attraction on offer. E.g. Red as a colour of excitement will be used for theme parks and similar venues. The main colours chosen to be used in this project are:
 
- * #000000 - Black - Text
- * #538D22 - Maximum Green - Attractions involving nature, outdoors events
- * #4F74E3 - Royal Blue Light - Knowledge and sea-life based attractions such as museums, boat tours amd aquariums
- * #F41101 - Red - Energic and exciting attractions including sporting events and theme parks
- * #997748 Metallic Sunburst (Brown) - Historical buildings and landmarks including castles and palaces  
+ * #000000 - Black - Text and footer
+ * #538D22 - Maximum Green - Navigation Bar
+ * #4F74E3 - Royal Blue Light - Flash Messages
+ * #FFFFFF - White - Used for text and backgrounds
+
+#### Database Structure:
+MongoDB was used to create and store user and attraction records. The database was configured on Heroku and MongoDB to automatically update when a new user registers or an attraction record is created, edited or deleted. The following were the collections set up on MongoDB:
+
+Users:
+| Key   | Value   |
+| ----- | ------- |
+| _id   | ObjectId |
+| username | String |
+| password | String |
+
+Attractions:
+| Key   | Value   |
+| ----- | ------- |
+| attraction_name  | String |
+| location | String |
+| description | String |
+| image | String |
+| free | String |
+| pre_booking_required | String |
+| suitable_for_children | String |
+
 
 ## Technologies:
 #### Programming Languages:
@@ -114,6 +138,8 @@ For this project, I have chosen to use striking and varied colours to represent 
  * [Github](https://github.com/)
  * [Gitpod](https://www.gitpod.io/)
  * [Heroku](https://www.heroku.com/)
+ * [Balsamic Wireframes](https://balsamiq.com/)
+ * [PyMongo](https://pymongo.readthedocs.io/en/stable/)
  * [Bootstrap](https://getbootstrap.com/)
  * [Google Fonts](https://fonts.google.com/)
  * [SweetAlert2](https://sweetalert2.github.io/#usage)
@@ -131,6 +157,17 @@ For this project, I have chosen to use striking and varied colours to represent 
  * Profile
  * Contact Form
  * Attractions Listing
+ * Add Attraction
+ * Edit Attraction
+ * Delete Attraction
+
+#### Future Implementation:
+ * Links to sites to purchase tickets
+ * Attraction Reviews
+ * Attraction Rating System
+ * Attraction location maps
+ * Greater search capabilities
+ * Videos and multiple images of each attraction
 
 ## Testing
 #### Navigation Bar:
