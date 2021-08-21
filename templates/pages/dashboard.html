@@ -3,27 +3,21 @@
     <h1>User Dashboard</h1>
     <div class="card text-center">
         <div class="card-header">
+          <section>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="row">
+                            <h5 class="center-align" id="flashmessage">{{ message }}</h5>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+          </section>
         </div>
         <div class="card-body">
           <p class="card-text">Thank you for logging in to your My Next Adventure profile!</p>
           <p class="card-text">Below you will be able to add an attraction, delete an attraction or make an edit. You will also be able to leave reviews!</p>
         </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-            <section>
-              {% with messages = get_flashed_messages() %}
-                  {% if messages %}
-                      {% for message in messages %}
-                          <div class="row">
-                              <h5 class="center-align" id="flashmessage">{{ message }}</h5>
-                          </div>
-                      {% endfor %}
-                  {% endif %}
-              {% endwith %}
-            </section>
-        </div>
-      </div>
     </div>
 {% endblock %}
