@@ -1,6 +1,19 @@
 {% extends "layout/base.html" %}
 {% block content %}
     <h1>Attractions Page</h1>
+    <!-- Flash Message -->
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row">
+                        <h5 class="center-align">{{ message }}</h5>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+    <!-- Attraction Records are looped onto the page -->
     {% for attraction in attractions %}
         <div class="row">
             <div class="col-sm-1">

@@ -1,5 +1,6 @@
 {% extends "layout/base.html" %}
 {% block content %}
+<!-- Flash Message -->
     <section>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -11,6 +12,7 @@
             {% endif %}
         {% endwith %}
     </section>
+    <!-- Add Attraction Form -->
     <h1>Add an Attraction</h1>
     <p class="card-text">Please fill in the fields below to submit your favourite attraction!</p>
     <div class="card">

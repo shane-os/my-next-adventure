@@ -1,6 +1,7 @@
 {% extends "layout/base.html" %}
 {% block content %}
     <h2>{{ title }}</h2>
+    <!-- Flash Message -->
     <section>
       {% with messages = get_flashed_messages() %}
           {% if messages %}
@@ -12,6 +13,7 @@
           {% endif %}
       {% endwith %}
     </section>
+    <!-- Registration Form -->
     <div class="card" id="registerform">
         <div class="card-body">
           <h5 class="card-title">Register</h5>
