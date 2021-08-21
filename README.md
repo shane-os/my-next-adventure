@@ -17,6 +17,7 @@
  * Icons
  * Images
  * Colour Scheme
+ * Database Structure
 
 ### Technologies
  * Programming Languages
@@ -102,6 +103,28 @@ For this project, I have chosen to use striking and varied colours to represent 
  * #538D22 - Maximum Green - Navigation Bar
  * #4F74E3 - Royal Blue Light - Flash Messages
  * #FFFFFF - White - Used for text and backgrounds
+
+#### Database Structure:
+MongoDB was used to create and store user and attraction records. The database was configured on Heroku and MongoDB to automatically update when a new user registers or an attraction record is created, edited or deleted. The following were the collections set up on MongoDB:
+
+Users:
+| Key   | Value   |
+| ----- | ------- |
+| _id   | ObjectId |
+| username | String |
+| password | String |
+
+Attractions:
+| Key   | Value   |
+| ----- | ------- |
+| attraction_name  | String |
+| location | String |
+| description | String |
+| image | String |
+| free | String |
+| pre_booking_required | String |
+| suitable_for_children | String |
+
 
 ## Technologies:
 #### Programming Languages:
