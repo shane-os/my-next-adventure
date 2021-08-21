@@ -22,18 +22,18 @@
                 <div class="card">
                     <img class="card-img-top" src="{{ attraction.image }}" alt="{{ attraction.attraction_name }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ attraction.attraction_name }}</h5>
+                        <h3 class="card-title"><b>{{ attraction.attraction_name }}</b></h3>
                         <p class="card-text">{{ attraction.location }}</p>
                         <p class="card-text">{{ attraction.description }}</p>
                         <div class="row">
                             <div class="col">
-                                <p class="card-text" >Free: {{ attraction.free }}</p>
+                                <p class="card-text" ><b>Free:</b> {{ attraction.free }}</p>
                             </div>
                             <div class="col">
-                                <p class="card-text">Pre-Booking Required: {{ attraction.pre_booking_required }}</p>
+                                <p class="card-text"><b>Pre-Booking Required:</b> {{ attraction.pre_booking_required }}</p>
                             </div>
                             <div class="col">
-                                <p class="card-text">Suitable for Children: {{ attraction.suitable_for_children }}</p>
+                                <p class="card-text"><b>Suitable for Children:</b> {{ attraction.suitable_for_children }}</p>
                             </div>
                         </div>
                         {% if session.user %}
