@@ -1,5 +1,7 @@
 # My Next Adventure
 
+![Cliffs_of_Moher](https://github.com/shane-os/my-next-adventure/blob/main/static/images/home-image.jpg)
+
 ## Contents
 
 ### UX (User Experience)
