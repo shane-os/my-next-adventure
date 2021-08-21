@@ -184,17 +184,18 @@ To access their account users only need to enter their username and password. Ch
 
 #### Code Validators:
  * The HTML code was passed through the W3C Validator
- * The CSS code was passed through the Jigsaw Validator
- * The JavaScript code was passed through the JSHint Validator
+ * The CSS code was passed through the Jigsaw Validator and the single error found of an incorrect padding setting was resolved.
+ * The JavaScript code was passed through the JSHint Validator and the three missing semi-colons were inputed into the code.
 
 ## Resolution of Bugs:
-Dashboard Access:
+#### Dashboard Access:
 Whilst building and testing the login and register entry points, the site would fail sporadically at bringing the user to dashboard after they has logged in or registered. To isolate where the cause of the problem was, I examined the MongoDB records to make sure that the user details were correctly recorded in the database. As it was clear that the usernames and passwords were being successfully recorded, I checked the dashboard, login and register html files along with the app.py file. Soon it became appearent that a required variable for the form was not being passed through correctly. To improve this layout, I examined [W3Schools](https://www.w3schools.com/PYTHON/) for Python related issues and I accessed [Tutorials Point](https://www.tutorialspoint.com/flask/index.htm) for Flask specific help.
 
-Logout Function:
+#### Logout Function:
 The log out and login functions are key to ensuring that only registered users can add, edit and delete attractions. For a while it was unclear whether the user session has finished. To fix this issue, I introduced flash messaging to inform the user that they are no logged in.
 
-
+#### MongoDB Collections:
+An issue that arose when creating a new user or attraction record was that a new collection would be established within the database. This would also lead to an incorrect list of attractions showing on the attractions page. To locate the source of the problem, the links and naming conventions were checked to see if there were any differences. After careful analysis, it was determined that a hyphen had been used instead of an underscore in the naming of the database. This small difference had a significant impact on the site as it prevented users from haing access to the entire site. The other files used to create the site were checked and the variable configurations in Heroku were checked to ensure that a similar error was not occurring elsewhere.
 
 ## Deployment:
 #### Gitpod:
@@ -285,3 +286,10 @@ web: python app.py
 7. Select "Deploy".
 8. Select "Automatic Deployment" as our app will update when new commits are pushed to Github. 
 9. Click the "Deploy Branch" button and click "View App" to see the site.
+
+## Accreditation & Gratitude:
+ * Firstly, I would like to thank my family for their help in testing the site and providing helpful feedback on the asthetics of the site. Over 50 separate accounts were created to test the login, registration and attraction features.
+ * Secondly, I would like to thank my mentor Simen Daehlin for his support and guidance in creating the basic concept and layout of the site.
+ * Finally, I would like to thank the tutors, fellow students, mentors and everyone at Code Institute for creating a helpful and supporting environemnt in Slack and through the different webinars.
+
+## References:
