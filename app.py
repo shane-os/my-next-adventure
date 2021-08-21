@@ -1,3 +1,4 @@
+# Import packages and environment
 import os
 from flask import (
     Flask, render_template,
@@ -11,7 +12,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-
+# App Configuration
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -20,11 +21,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Home Page
 @app.route("/")
 def home():
     return render_template("pages/home.html", title="My Next Adventure")
 
 
+# Attractions
 @app.route("/attractions")
 def attractions():
     getattractions = mongo.db.attractions.find()
@@ -37,14 +40,18 @@ def attractions():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     target = request.form.get("target")
-    attractions = list(mongo.db.attractions.find({"$text": {"$search": target}}))
-    return render_template("pages/attractions.html", title="Attractions", attractions=attractions)
+    attractions = list(
+        mongo.db.attractions.find({"$text": {"$search": target}}))
+    return render_template(
+        "pages/attractions.html", title="Attractions", attractions=attractions)
 
 
+# Login Page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        user_exists = mongo.db.users.find_one({"username": request.form.get("username").lower()})
+        user_exists = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
 
         if user_exists:
 
@@ -62,10 +69,12 @@ def login():
     return render_template("pages/login.html", title="Login")
 
 
+# Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        user_exists = mongo.db.users.find_one({"username": request.form.get("username").lower()})
+        user_exists = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
 
         if user_exists:
             flash("Username already in use")
@@ -77,7 +86,8 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("userpassword")),
+            "password": generate_password_hash(
+                request.form.get("userpassword")),
             "admin": False
         }
 
@@ -90,6 +100,7 @@ def register():
     return render_template("pages/register.html", title="Register")
 
 
+# Dashboard
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
     username = mongo.db.users.find_one(
@@ -100,6 +111,7 @@ def dashboard(username):
         return redirect(url_for("home"))
 
 
+# Edit Attraction
 @app.route("/edit_attraction/<attraction_id>", methods=["GET", "POST"])
 def edit_attraction(attraction_id):
     if request.method == "POST":
@@ -124,12 +136,15 @@ def edit_attraction(attraction_id):
             "pre_booking_required": prebook,
             "suitable_for_children": child
         }
-        mongo.db.attractions.update({"_id": ObjectId(attraction_id)}, attraction_edit)
+        mongo.db.attractions.update(
+            {"_id": ObjectId(attraction_id)}, attraction_edit)
         flash("Attraction Successfully Updated!")
         return redirect(url_for("attractions"))
 
-    attraction_to_edit = mongo.db.attractions.find_one({"_id": ObjectId(attraction_id)})
-    return render_template("pages/edit_attraction.html", attractions=attraction_to_edit)
+    attraction_to_edit = mongo.db.attractions.find_one(
+        {"_id": ObjectId(attraction_id)})
+    return render_template(
+        "pages/edit_attraction.html", attractions=attraction_to_edit)
 
 
 # Add Attraction
@@ -172,6 +187,7 @@ def delete_attraction(attraction_id):
     return redirect(url_for("attractions"))
 
 
+# Logout
 @app.route("/logout")
 def logout():
     flash("You have successfully logged out!")
@@ -179,6 +195,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Contact Us
 @app.route("/contactus")
 def contactus():
     return render_template("pages/contactus.html", title="Contact Us")
