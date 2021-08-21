@@ -115,6 +115,8 @@ For this project, I have chosen to use striking and varied colours to represent 
  * [Github](https://github.com/)
  * [Gitpod](https://www.gitpod.io/)
  * [Heroku](https://www.heroku.com/)
+ * [Balsamic Wireframes](https://balsamiq.com/)
+ * [PyMongo](https://pymongo.readthedocs.io/en/stable/)
  * [Bootstrap](https://getbootstrap.com/)
  * [Google Fonts](https://fonts.google.com/)
  * [SweetAlert2](https://sweetalert2.github.io/#usage)
