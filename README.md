@@ -83,6 +83,8 @@
  * Site layout is simple and easy to navigate.
  * Users can contact the site owner if an issue occurs.
 
+![Am I Responsive Image](https://github.com/shane-os/my-next-adventure/blob/main/static/images/amiresponsiveimage.PNG)
+
 ## Site Layout & Design:
 #### Wireframes:
 Initially I set out my ideas for the site using pen and paper. Following a few changes, I proceeded to create wireframes using the Balsamiq Wireframe application. The three wireframes have been stored in a PDF format at the following locations:
@@ -186,6 +188,7 @@ To access their account users only need to enter their username and password. Ch
  * The HTML code was passed through the W3C Validator
  * The CSS code was passed through the Jigsaw Validator and the single error found of an incorrect padding setting was resolved.
  * The JavaScript code was passed through the JSHint Validator and the three missing semi-colons were inputed into the code.
+ * The Python code files adhere to the PEP8 styling guidelines.
 
 ## Resolution of Bugs:
 #### Dashboard Access:
