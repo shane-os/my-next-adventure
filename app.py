@@ -104,17 +104,17 @@ def dashboard(username):
 def edit_attraction(attraction_id):
     if request.method == "POST":
         if request.form.get("freeattraction") == "Yes":
-            attractionprice = True
+            attractionprice = "Yes"
         else:
-            attractionprice = False
+            attractionprice = "No"
         if request.form.get("bookticket") == "Yes":
-            prebook = True
+            prebook = "Yes"
         else:
-            prebook = False
+            prebook = "No"
         if request.form.get("children") == "Yes":
-            child = True
+            child = "Yes"
         else:
-            child = False
+            child = "No"
         attraction_edit = {
             "attraction_name": request.form.get("attraction_name"),
             "location": request.form.get("location"),
@@ -137,17 +137,17 @@ def edit_attraction(attraction_id):
 def add_attraction():
     if request.method == "POST":
         if request.form.get("freeattraction") == "Yes":
-            attractionprice = True
+            attractionprice = "Yes"
         else:
-            attractionprice = False
+            attractionprice = "No"
         if request.form.get("bookticket") == "Yes":
-            prebook = True
+            prebook = "Yes"
         else:
-            prebook = False
+            prebook = "No"
         if request.form.get("children") == "Yes":
-            child = True
+            child = "Yes"
         else:
-            child = False
+            child = "No"
         newattraction = {
             "attraction_name": request.form.get("attraction_name"),
             "location": request.form.get("location"),
